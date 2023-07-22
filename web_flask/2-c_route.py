@@ -22,7 +22,10 @@ def hbnb():
     return ("HBNB")
 
 
-@app.route('c/')
+@app.route('/c/<text>', strict_slashes=False)
+def c(text):
+    """ print C, with the text passed in """
+    return ("C " + text.replace("_", " "))
 
 
 if __name__ == "__main__":
