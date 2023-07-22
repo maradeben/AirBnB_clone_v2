@@ -3,6 +3,7 @@
     - hbnb route
     - c route
     - python route
+    - number route
 """
 
 from flask import Flask
@@ -34,6 +35,12 @@ def c(text):
 def python_text(text="is cool"):
     """ print Python, with the text """
     return ("Python " + text.replace("_", " "))
+
+
+@app.route('/number/<int:n>', strict_slashes=False)
+def number(n):
+    """ return only if it's int """
+    return ("{:d} is a number".format(n))
 
 
 if __name__ == "__main__":
