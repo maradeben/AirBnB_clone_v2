@@ -43,6 +43,7 @@ def number(n):
     """ return only if it's int """
     return ("{:d} is a number".format(n))
 
+
 @app.route('/number_template/<int:n>', strict_slashes=False)
 def numbertemplate(n):
     """ render a template """
